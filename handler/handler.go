@@ -16,6 +16,8 @@ func init() {
 func GetHandler(w http.ResponseWriter, r *http.Request){
 	Counter += 1
 
+	logrus.Infof("Counter is %d", Counter)
+
 	json := simplejson.New()
 	json.Set("Counter", Counter)
 
